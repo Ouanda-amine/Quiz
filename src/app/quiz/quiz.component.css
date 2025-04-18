@@ -1,0 +1,15 @@
+#qs{
+  text-align: center;
+}
+body{
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(73, 2, 131, 0.67);
+}
+#diiv{
+  background-color: rgba(230, 96, 204, 0.65);
+}

@@ -1,11 +1,13 @@
-<h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+<body>
+
+<h1 id="qs">Quiz Started</h1>
 <div class="container mt-4" *ngIf="questions.length">
 </div> <div class="container mt-4" *ngIf="questions.length">
   <div *ngIf="currentQuestion < questions.length">
     <h4>Question {{ currentQuestion + 1 }} / {{ questions.length }}</h4>
     <p [innerHTML]="questions[currentQuestion].question"></p>
-    <div class="list-group">
-      <button class="list-group-item list-group-item-action"
+    <div class="list-group" >
+      <button class="list-group-item list-group-item-action" id="diiv"
               *ngFor="let ans of questions[currentQuestion].answers"
               [class.list-group-item-success]="isAnswered && ans === correctAnswer"
               [class.list-group-item-danger]="isAnswered && ans === selected && ans !== correctAnswer"
@@ -21,3 +23,4 @@
     <button class="btn btn-success" (click)="saveResult()">Enregistrer</button>
   </div>
 </div>
+</body>

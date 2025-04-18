@@ -1,23 +1,23 @@
 
-<body>
-<h1 id="ph">Testez vos connaissances  et acquérez-en de nouvelles </h1>
+<body  >
+<h1 id="ph" >Testez vos connaissances  et acquérez-en de nouvelles </h1>
 
-  <div class="container">
+  <div class="container w-50 m-auto" >
 
 
     <form (ngSubmit)="Start()" >
 
       <div class="row" id="myrow">
-        <div class="col-md-6">
-          <label for="categorie">Catégorie:</label>
-          <select [(ngModel)]="categorie" id="categorie" class="form-control" >
+        <div class="col-sm-6">
+          <label for="categorie" id="lb"> choisissez une Catégorie:</label>
+          <select [(ngModel)]="categorie" id="categorie" class="btn btn-outline-dark w-25"  >
             <option *ngFor="let cat of tableCategories" [value]="cat.id">{{ cat.name }}</option>
           </select>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-6">
 
-          <label for="difficulty">Difficulté:</label>
-          <select [(ngModel)]="dif" id="difficulty" class="form-control">
+          <label for="difficulty" id="lbb">Definir le niveau de Difficulté:</label>
+          <select [(ngModel)]="dif" id="difficulty" class="btn btn-outline-dark w-25">
             <option value="easy">Facile</option>
             <option value="medium">Moyen</option>
             <option value="hard">Difficile</option>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="col-sm-12">
-        <button class="btn btn-primary col-sm-12">Démarrer</button>
+        <button class="btn btn-outline-info col-sm-6" id="btdm">Démarrer</button>
       </div>
 
     </form>
