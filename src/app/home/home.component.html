@@ -1,1 +1,37 @@
-<h1>Testez vos connaissances  et acquérez-en de nouvelles </h1>
+
+<body>
+<h1 id="ph">Testez vos connaissances  et acquérez-en de nouvelles </h1>
+
+  <div class="container">
+
+
+    <form (ngSubmit)="Start()" >
+
+      <div class="row" id="myrow">
+        <div class="col-md-6">
+          <label for="categorie">Catégorie:</label>
+          <select [(ngModel)]="categorie" id="categorie" class="form-control" >
+            <option *ngFor="let cat of tableCategories" [value]="cat.id">{{ cat.name }}</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+
+          <label for="difficulty">Difficulté:</label>
+          <select [(ngModel)]="dif" id="difficulty" class="form-control">
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+          </select>
+
+
+
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <button class="btn btn-primary col-sm-12">Démarrer</button>
+      </div>
+
+    </form>
+
+  </div>
+</body>
